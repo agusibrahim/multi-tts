@@ -1,0 +1,41 @@
+<?php
+/**
+ * Constants for various TTS configuration options
+ *
+ */
+
+// Full path to the directory we are running in. No trailing slash.
+// Defaults to dirname(__FILE__) which will be the directory this config file sits in.
+define('DOCROOT', dirname(__FILE__));
+
+// Set to true to save the generated audio file locally
+define('SAVE_LOCALLY', true);
+
+// Directory to save audio files (relative). Include leading and trailing slashes.
+// Needs to exist and have write permissions. The script will attempt to create it for you if it doesn't exist.
+define('AUDIO_DIR', '/assets/audio/');
+
+// Hours to keep files for (whenever a new file is saved files older than this will be removed)
+define('HOURS_TO_KEEP', 24);
+
+// Save a textual transcription of the audio?
+// This will save a .txt file containing the user's text input in addition to the .mp3 of the audio that was generated.
+// Filenames will be identical other than extension
+// If set to true, SAVE_LOCALLY also needs to be set to true
+define('SAVE_TXT', false);
+
+// TikTok Session ID
+// These seem to expire randomly after an arbritrary amount of time, sometimes sooner than the time they are valid for.
+// You'll need to update this every time it expires until a better solution is found.
+// To do this you will need to:
+// 1. Login to TikTok in your web browser
+// 2. Look for a cookie named "sessionid" - you may wish to use the Cookie Editor extension (https://cookie-editor.cgagnier.ca) for your browser to do this.
+// 3. Copy and paste the value below
+define('TIKTOK_SID', '581a1225c93f9b4bb9aacc49e4ebc5a9');
+
+// iSpeech API key
+// A valid key is required to use the iSpeech TTS service as their public demo website is no longer functional.
+// If you do not have one, 'developerdemokeydeveloperdemokey' can be used, however, this has very limited use:
+// - TTS input will be limited to a maximum of 100 words
+// - Generated audio will usually contain a message telling you to obtain a valid key
+define('API_KEY_ISPEECH', 'developerdemokeydeveloperdemokey');
