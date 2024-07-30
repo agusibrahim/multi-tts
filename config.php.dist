@@ -31,7 +31,7 @@ define('SAVE_TXT', false);
 // 1. Login to TikTok in your web browser
 // 2. Look for a cookie named "sessionid" - you may wish to use the Cookie Editor extension (https://cookie-editor.cgagnier.ca) for your browser to do this.
 // 3. Copy and paste the value below
-define('TIKTOK_SID', 'ReplaceThisWithARealSID');
+define('TIKTOK_SID', '581a1225c93f9b4bb9aacc49e4ebc5a9');
 
 // iSpeech API key
 // A valid key is required to use the iSpeech TTS service as their public demo website is no longer functional.
